@@ -15,7 +15,9 @@ export default function App() {
   }
 
   function deleteGoalHandler(id) {
-    console.log("delete");
+    setCourseGoals((prev) => {
+      return prev.filter((goal) => goal.id != id);
+    });
   }
 
   return (
